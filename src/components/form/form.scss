@@ -1,0 +1,48 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 7px;
+
+    &_inputs {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+
+        input {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 2px solid #dee2e6;
+            border-radius: 5px;
+            outline: none;
+            transition: border 0.2s;
+
+            &:focus {
+                border: 2px solid #9fa2fa;
+            }
+        }
+    }
+
+    &_controls {
+        button {
+            margin-right: 10px;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .form {
+        &_controls {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            button {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    }
+}

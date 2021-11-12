@@ -1,0 +1,101 @@
+.books {
+    margin-top: 10px;
+
+    .book {
+        background: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: 10px;
+        display: flex;
+        padding: 15px;
+        margin-bottom: 15px;
+        overflow: hidden;
+
+        &_preview {
+            display: flex;
+            justify-content: center;
+
+            img {
+                max-width: 130px;
+                max-height: 250px;
+                border-radius: 7px;
+                object-fit: cover;
+            }
+        }
+
+        &_info {
+            display: flex;
+            flex-direction: column;
+            padding: 0 15px;
+            overflow: hidden;
+
+            b {
+                font-size: 1.5em;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 300;
+                margin-bottom: 10px;
+                word-wrap: break-word;
+            }
+
+            span {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1.1em;
+                word-wrap: break-word;
+
+                &:last-child {
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        &_controls {
+            margin-left: auto;
+            display: flex;
+            flex-direction: column;
+
+            button:last-child {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+.empty {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+
+    span {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 650px) {
+    .books {
+        .book {
+            flex-direction: column;
+
+            &_preview {
+                margin-bottom: 15px;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            &_controls {
+                margin-top: 15px;
+                width: 100%;
+
+                button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
